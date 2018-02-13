@@ -103,11 +103,14 @@ h2 {
   }
 }
 
-@media screen and (max-width: 407px) {
+@media screen and (max-width: 495px) {
   .guessedWord {
-    font-size: 50px;
+    font-size: 30px;
   }
   .letters {
     font-size: 15px;
+  }
+  h2 {
+    font-size: 20px;
   }
 }
