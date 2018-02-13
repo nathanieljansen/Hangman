@@ -104,8 +104,8 @@ h2 {
 }
 
 @media screen and (max-width: 495px) {
-  .guessedWord {
-    font-size: 30px;
+  .guessedWord li{
+    font-size: 50px;
   }
   .letters {
     font-size: 15px;
