@@ -60,6 +60,11 @@ h2 {
 .guessRemaining {
   font-size: 25px;
   text-align: center;
+  margin-bottom: 60px;
+}
+
+.footer {
+  text-align: center;
 }
 
 @media screen and (min-width: 1400px) {
