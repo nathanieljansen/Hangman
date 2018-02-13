@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,68 @@
 
 
 </head>
-<body font-family:"Oswald|Schoobell" background="./assets/images/background.jpg">
-<h1>Hangman</h1>
-<div class="container">
 
-  <div class="instructions">
-    <h2>Press Any Letter to Get Started</h2>
+<body class="body" font-family: "Oswald|Schoobell" background="./assets/images/background.jpg">
+
+    <h1>Hangman</h1>
+
+    <div class="borderBottom">
+      <ul class="bottom">
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+        <li>_ </li>
+      </ul>
+    </div>
+  <div class="container">
+    <div class="instructions">
+      <h2>Press Any Letter to Get Started</h2>
+    </div>
+
+    <div class="currentWord">
+      <h3>Current Word</h3>
+    </div>
+
+    <div class="word">
+      <ul class=guessedWord>
+        <li class="guess">_</li>
+        <li class="guess">_</li>
+        <li class="guess">_</li>
+        <li class="guess">_</li>
+        <li class="guess">_</li>
+        <li class="guess">_</li>
+        <li class="guess">_</li>
+        <li class="guess">_</li>
+        <li class="guess"></li>
+        <li class="guess">_</li>
+      </ul>
+    </div>
+
+    <div class="letterGuessed">
+      <h3>Letters Aready Guessed</h3>
+    </div>
+
+    <div class="letters">
+      <h3>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h3>
+    </div>
+
+    <div class=guessRemaining>
+      <h3>Number of Guesses Remaining 12</h3>
+    </div>
+
+
+
   </div>
 
-  <div class="currentWord">
 
-  </div>
-
-  <div class=guessRemaining>
-    <h3>Number of Guesses Remaining</h3>
-  </div>
-
-  <div class="letterGuessed">
-    <h3>Letters Aready Guessed</h3>
-  </div>
-
-</div>
-
-  
 </body>
+
 </html>
