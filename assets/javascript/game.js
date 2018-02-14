@@ -9,4 +9,8 @@
 // whimsical
 // courageous
 
+var word;
 
+var guess;
+
+var  
