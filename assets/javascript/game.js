@@ -1,4 +1,4 @@
-// Generate a random word
+// Generate a random word and the appropriate number of spaces for the word
 // WHen the person it inputs to it needs to check if that letter is in the word or not
 // Letters appear
 // Number of guesses decreases
@@ -6,6 +6,13 @@
 // After guessing the correct word it says you win
 
 window.onload = function () {
+
+  var guess;
+
+  var space = 10;
+
+
+  var lives = 12;
 
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
     'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -20,19 +27,16 @@ window.onload = function () {
   console.log(word)
 
 
-  var guess;
-
-  var space = 10;
-
-  var lives = 12;
 
   var showLives = document.getElementById("guessRemaining");
 
-document.onkeyup = function(event) {
-  var guesses = event.key;
-  console.log(guesses);
-}
+  // Accepts users letter guesses
+  document.onkeyup = function (event) {
+    var guesses = event.key.toLowerCase();
+    console.log(guesses);
+  }
 
+  
 
 }
 
