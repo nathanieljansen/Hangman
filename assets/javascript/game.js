@@ -27,7 +27,6 @@ window.onload = function () {
 
   var guess ;
 
-  var space = 10;
 
   var guesses = 12;
 
@@ -40,8 +39,19 @@ window.onload = function () {
   // Computer selects a ranom word
   var randomWord = Math.floor(Math.random() * words.length)
 
+
   var word = words[randomWord]
+  var wordLength = word.length
   console.log(word)
+
+  for (var i = 0; i < wordLength; i++) {
+    var spaces = document.createElement("li");
+    spaces.innerHTML = "_ ";
+    guessedWord.appendChild(spaces);
+
+  }
+
+
 
   // Accepts users letter guesses
   document.onkeyup = function (event) {
@@ -50,12 +60,13 @@ window.onload = function () {
   }
 
   // Guesses Remaining
-  comments = function () {
-  guessRemaining.innerHTML = "You have " + guesses + " guesses remaining";
+  guessRemaining.innerHTML = "You have " + guesses + " guess(es) remaining";
   if (guesses < 1) {
     guessRemaining.innerHTML = "Game Over";
     }
-  }
+  
+
+
 
 }
 
