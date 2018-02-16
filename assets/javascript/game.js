@@ -5,14 +5,31 @@
 // After 12 wrong guess says you lose
 // After guessing the correct word it says you win
 
+
+// GIVEN AN ARRY OF SAVE USER GUESSES
+
+// GIVEN A CURRENT
+
+// GIVEN A CURRENT WORD TO CHECK AGAINST
+
+// THEN SHOW A STRING WITH CORRECT LETTERS
+
+// START WITH EMPTY RESULT STRING
+// LOOP THROUGH EACH LETTER OF THE WORD
+    //ADD UNDERSCORE TO RESULT
+    //LOOP THROUGH EACH CORRECT GUESS
+      //IF LETTER IS SAME AS CURRENT LETTER OF WORD REPLACE WITH LETTER
+
+//
+
+
 window.onload = function () {
 
-  var guess;
+  var guess ;
 
   var space = 10;
 
-
-  var lives = 12;
+  var guesses = 12;
 
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
     'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -33,9 +50,12 @@ window.onload = function () {
   }
 
   // Guesses Remaining
-  guessRemaining.innerHTML = "You have " + lives + " guesses remaining";
-
-  
+  comments = function () {
+  guessRemaining.innerHTML = "You have " + guesses + " guesses remaining";
+  if (guesses < 1) {
+    guessRemaining.innerHTML = "Game Over";
+    }
+  }
 
 }
 
