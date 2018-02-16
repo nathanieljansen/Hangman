@@ -58,7 +58,7 @@ h2 {
   margin-bottom: 60px;
 }
 
-.guessRemaining {
+#guessRemaining {
   font-size: 25px;
   text-align: center;
   margin-bottom: 60px;

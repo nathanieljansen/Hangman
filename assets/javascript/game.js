@@ -26,15 +26,14 @@ window.onload = function () {
   var word = words[randomWord]
   console.log(word)
 
-
-
-  var showLives = document.getElementById("guessRemaining");
-
   // Accepts users letter guesses
   document.onkeyup = function (event) {
     var guesses = event.key.toLowerCase();
     console.log(guesses);
   }
+
+  // Guesses Remaining
+  guessRemaining.innerHTML = "You have " + lives + " guesses remaining";
 
   
 
