@@ -25,48 +25,84 @@
 
 window.onload = function () {
 
-  var guess ;
+  var letterArray = [ ];
 
 
-  var guesses = 12;
 
-  var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-    'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-    't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  // var splitLetterArray = letterArray.split()
+
+  guesses = 12
 
   var words = ["connection", "majestic", "spiky", "overt", "rigid", "end", "awake", "limit", "whimsical", "courageous"]
 
-  // Computer selects a ranom word
-  var randomWord = Math.floor(Math.random() * words.length)
+  // Computer selects a random word
+  var randomIndex = Math.floor(Math.random() * words.length);
+
+  var currentWord = words[randomIndex];
+
+  var wordLength = currentWord.length;
+
+  var correctWord = "";
+
+  var wordInPlay = "";
+
+  
+  console.log(currentWord)
 
 
-  var word = words[randomWord]
-  var wordLength = word.length
-  console.log(word)
-
+// Current word is given spaces
   for (var i = 0; i < wordLength; i++) {
     var spaces = document.createElement("li");
     spaces.innerHTML = "_ ";
+    spaces.classList.add("spaced");
     guessedWord.appendChild(spaces);
-
+    correctWord += currentWord[i];
+    wordInPlay += "-";
+    console.log(correctWord);
+    console.log(wordInPlay);
   }
 
 
-
-  // Accepts users letter guesses
+ // Create a new variable that + or joins guessed letter every time key is pressed
+ // look up how to use join()
+ //console log the new variable to see if its working
+ // figure out how to display the letters in variable
+  // Accepts users' letter inputs
   document.onkeyup = function (event) {
-    var guesses = event.key.toLowerCase();
-    console.log(guesses);
+    var guessedLetter = event.key.toLowerCase();
+    console.log(guessedLetter);
+    // Before execute this line have to be sure user hasn't picked that letter already...if/if else statement{ 
+    letterArray.push(" " + guessedLetter); 
+    console.log(letterArray);
+    document.getElementById("letters").innerHTML = letterArray;
+    
+  // }
+
+    for(var j = 0; j < wordInPlay.length; j++) {
+      if (correctWord[j] === guessedLetter) { 
+        wordInPlay[j] = guessedLetter;
+       var lisInDom = document.querySelectorAll(".spaced");
+       lisInDom[j].innerText = guessedLetter + " ";
+      }
+    }
+
+
+
   }
 
-  // Guesses Remaining
-  guessRemaining.innerHTML = "You have " + guesses + " guess(es) remaining";
-  if (guesses < 1) {
-    guessRemaining.innerHTML = "Game Over";
-    }
+
   
 
 
+  // Guesses Remaining
+  document.getElementById("guessRemaining").innerHTML = "You have " + guesses + " guess(es) remaining";
+  if (guesses <= 0) {
+    document.getElementById("guessRemaining").innerHTML  = "Game Over";
+  }
+
+  // for ( j = 0; j == currentWord; j++) {
+   
+    
 
 }
 
