@@ -46,8 +46,7 @@ window.onload = function () {
     console.log(letterArray);
     document.getElementById("letters").innerHTML = letterArray;
 
-    // }
-
+    // This replaces the space with the correct letter
     for (var j = 0; j < wordInPlay.length; j++) {
       if (correctWord[j] === guessedLetter) {
         wordInPlay[j] = guessedLetter;
@@ -60,10 +59,8 @@ window.onload = function () {
         guessesRemaining--;
         console.log(guessesRemaining)
          }
-      }
-    
+      } 
   }
- 
 }
 
 
